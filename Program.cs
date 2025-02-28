@@ -1,21 +1,21 @@
-﻿namespace Задание_1._1
+﻿namespace _1._1
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            string userInput = "";
-            while(userInput != "exit")
+            string stopword = "exit";
+            bool isWorking = true;
+            while (isWorking)
             {
-                Console.Write("Введите что-нибудь (или 'exit' для выхода):");
-                userInput = Console.ReadLine();
-                
-                if(userInput != "exit")
+                Console.Write("Введите команду: ");
+                string command = Console.ReadLine();
+                if(command == stopword)
                 {
-                    Console.WriteLine($"Вы ввели: {userInput}");
+                    break;
                 }
             }
-            Console.WriteLine("Вы завершили программу");
+            
         }
     }
 }
